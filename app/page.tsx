@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 import CustomCursor from "@/components/CustomCursor";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Stats from "@/components/Stats";
 import Services from "@/components/Services";
 import TeamSection from "@/components/TeamSection";
 import PageLoader from "@/components/PageLoader";
+import WhyChooseUs from "@/components/WhyChooseUs";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -49,7 +49,7 @@ export default function Home() {
           <Hero />
           <TeamSection />
           <Services />
-          {/* <Stats /> */}
+          <WhyChooseUs />
         </motion.main>
       )}
     </>

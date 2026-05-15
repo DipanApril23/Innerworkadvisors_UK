@@ -90,12 +90,16 @@ const services: ServiceSectionType[] = [
       {
         icon: Shield,
         title: "Consumer Protection Cases",
-        points: ["Representation in consumer disputes against Indian companies."],
+        points: [
+          "Representation in consumer disputes against Indian companies.",
+        ],
       },
       {
         icon: ScrollText,
         title: "Legal Documentation & Verification",
-        points: ["Drafting and validating Power of Attorney, contracts, affidavits, and more."],
+        points: [
+          "Drafting and validating Power of Attorney, contracts, affidavits, and more.",
+        ],
       },
     ],
   },
@@ -447,10 +451,6 @@ export default function Services() {
 
       <div className="relative z-10 mx-auto max-w-7xl">
         {/* =====================================================
-            HEADING
-        ===================================================== */}
-
-        {/* =====================================================
     PREMIUM HEADING
 ===================================================== */}
 
@@ -628,7 +628,8 @@ export default function Services() {
               WebkitFontSmoothing: "antialiased",
             }}
           >
-           End‑to‑end legal, financial, and property solutions for NRIs in the UK.
+            End‑to‑end legal, financial, and property solutions for NRIs in the
+            UK.
           </motion.p>
 
           {/* Premium Underline */}
