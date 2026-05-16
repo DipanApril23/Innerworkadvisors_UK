@@ -141,7 +141,7 @@ export default function PremiumTestimonials() {
               <div className="absolute inset-0 bg-gradient-to-r from-[#f2cf7b]/5 via-[#ffe6aa]/10 to-[#f2cf7b]/5" />
               <Sparkles className="relative h-4 w-4 text-[#f2cf7b]" />
               <span className="relative text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f2cf7b] sm:text-xs">
-                Why Choose Us
+                Client Testimonials
               </span>
             </div>
           </motion.div>
