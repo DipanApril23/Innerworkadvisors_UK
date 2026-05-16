@@ -90,7 +90,8 @@ interface Testimonial {
 
 export default function PremiumTestimonials() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [activeModalReview, setActiveModalReview] = useState<Testimonial | null>(null);
+  const [activeModalReview, setActiveModalReview] =
+    useState<Testimonial | null>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -122,36 +123,138 @@ export default function PremiumTestimonials() {
       <div className="relative z-10 mx-auto max-w-6xl px-6">
         {/* HEADING SECTION */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="heading-anim relative mb-14 text-center sm:mb-20"
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: false,
+            amount: 0.2,
+          }}
+          transition={{
+            duration: 0.8,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="relative mb-14 text-center sm:mb-20"
         >
-          <div className="absolute left-1/2 top-1/2 h-40 w-[28rem] -translate-x-1/2 -translate-y-1/2 bg-[#f2cf7b]/10 blur-[120px] pointer-events-none" />
+          {/* Background Glow */}
+          <div
+            className="
+      absolute
+      left-1/2
+      top-1/2
+      h-40
+      w-[28rem]
+      -translate-x-1/2
+      -translate-y-1/2
+      bg-[#f2cf7b]/10
+      blur-[120px]
+    "
+          />
 
+          {/* Badge */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: false }}
-            transition={{ duration: 0.5 }}
+            initial={{
+              opacity: 0,
+              scale: 0.9,
+            }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+            }}
+            viewport={{
+              once: false,
+            }}
+            transition={{
+              duration: 0.5,
+            }}
             className="inline-block"
           >
-            <div className="relative inline-flex items-center gap-2 overflow-hidden rounded-full border border-[#f2cf7b]/20 bg-[#f2cf7b]/10 px-4 py-2 backdrop-blur-xl">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#f2cf7b]/5 via-[#ffe6aa]/10 to-[#f2cf7b]/5" />
+            <div
+              className="
+        relative
+        inline-flex
+        items-center
+        gap-2
+        overflow-hidden
+        rounded-full
+        border
+        border-[#f2cf7b]/20
+        bg-[#f2cf7b]/10
+        px-4
+        py-2
+        backdrop-blur-xl
+      "
+            >
+              <div
+                className="
+          absolute
+          inset-0
+          bg-gradient-to-r
+          from-[#f2cf7b]/5
+          via-[#ffe6aa]/10
+          to-[#f2cf7b]/5
+        "
+              />
+
               <Sparkles className="relative h-4 w-4 text-[#f2cf7b]" />
+<<<<<<< HEAD
               <span className="relative text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f2cf7b] sm:text-xs">
+=======
+
+              <span
+                className="
+          relative
+          text-[11px]
+          font-semibold
+          uppercase
+          tracking-[0.22em]
+          text-[#f2cf7b]
+          sm:text-xs
+        "
+              >
+>>>>>>> 665f8ce (updated Testimonials-Page-header)
                 Client Testimonials
               </span>
             </div>
           </motion.div>
 
+          {/* Heading */}
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
-            transition={{ duration: 0.7, delay: 0.08 }}
-            className="relative mx-auto mt-6 max-w-6xl text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
+            initial={{
+              opacity: 0,
+              y: 30,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: false,
+              amount: 0.2,
+            }}
+            transition={{
+              duration: 0.7,
+              delay: 0.08,
+            }}
+            className="
+      relative
+      mx-auto
+      mt-6
+      max-w-6xl
+      text-4xl
+      font-bold
+      leading-[1.1]
+      tracking-tight
+      text-white
+      sm:text-5xl
+      md:text-6xl
+      lg:text-7xl
+    "
             style={{
               transform: "translateZ(0)",
               backfaceVisibility: "hidden",
@@ -160,36 +263,130 @@ export default function PremiumTestimonials() {
           >
             What our{" "}
             <span className="relative inline-block">
-              <span className="absolute inset-0 bg-gradient-to-r from-[#f2cf7b]/20 via-[#ffe6aa]/20 to-[#f2cf7b]/20 blur-2xl" />
-              <span className="relative bg-gradient-to-r from-[#f2cf7b] via-[#ffe6aa] to-[#f2cf7b] bg-clip-text text-transparent">
+              <span
+                className="
+          absolute
+          inset-0
+          bg-gradient-to-r
+          from-[#f2cf7b]/20
+          via-[#ffe6aa]/20
+          to-[#f2cf7b]/20
+          blur-2xl
+        "
+              />
+
+              <span
+                className="
+          relative
+          bg-gradient-to-r
+          from-[#f2cf7b]
+          via-[#ffe6aa]
+          to-[#f2cf7b]
+          bg-clip-text
+          text-transparent
+        "
+              >
                 UK clients{" "}
               </span>
-            </span>{" "}
-            say
+              <span>say</span>
+            </span>
           </motion.h2>
 
+          {/* Description */}
           <motion.p
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-white/75 sm:text-base md:text-lg"
+            initial={{
+              opacity: 0,
+              y: 18,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: false,
+            }}
+            transition={{
+              duration: 0.6,
+              delay: 0.15,
+            }}
+            className="
+      mx-auto
+      mt-6
+      max-w-2xl
+      text-sm
+      leading-relaxed
+      text-white/75
+      sm:text-base
+      md:text-lg
+    "
           >
             Trusted legal and consultancy solutions for NRIs with excellence,
             transparency and global support.
           </motion.p>
 
+          {/* Underline */}
           <motion.div
-            initial={{ width: 0, opacity: 0 }}
-            whileInView={{ width: "7rem", opacity: 1 }}
-            viewport={{ once: false }}
-            transition={{ duration: 0.8, delay: 0.22 }}
-            className="relative mx-auto mt-8 h-[3px] rounded-full bg-gradient-to-r from-[#f2cf7b] via-[#ffe6aa] to-[#f2cf7b]"
+            initial={{
+              width: 0,
+              opacity: 0,
+            }}
+            whileInView={{
+              width: "7rem",
+              opacity: 1,
+            }}
+            viewport={{
+              once: false,
+            }}
+            transition={{
+              duration: 0.8,
+              delay: 0.22,
+            }}
+            className="
+      relative
+      mx-auto
+      mt-8
+      h-[3px]
+      rounded-full
+      bg-gradient-to-r
+      from-[#f2cf7b]
+      via-[#ffe6aa]
+      to-[#f2cf7b]
+    "
           >
-            <div className="absolute inset-0 rounded-full bg-[#f2cf7b] opacity-60 blur-md" />
+            <div
+              className="
+        absolute
+        inset-0
+        rounded-full
+        bg-[#f2cf7b]
+        opacity-60
+        blur-md
+      "
+            />
           </motion.div>
-        </motion.div>
 
+          {/* Soft Glow */}
+          <motion.div
+            animate={{
+              scale: [1, 1.05, 1],
+              opacity: [0.15, 0.3, 0.15],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="
+      mx-auto
+      mt-4
+      h-20
+      w-20
+      rounded-full
+      bg-[#f2cf7b]/10
+      blur-3xl
+    "
+          />
+        </motion.div>{" "}
         {/* CAROUSEL COMPONENT WITH HIGHLIGHTER */}
         <div className="mt-12 max-w-5xl mx-auto">
           <div className="swiper-viewport-container relative lg:[clip-path:inset(-100px_0px_-100px_0px)]">
@@ -270,7 +467,7 @@ export default function PremiumTestimonials() {
                           <blockquote className="review-text text-sm font-medium leading-relaxed text-slate-400 line-clamp-4 transition-colors duration-500">
                             “{item.review}”
                           </blockquote>
-                          
+
                           {isLongReview && (
                             <button
                               onClick={() => setActiveModalReview(item)}
@@ -376,7 +573,10 @@ export default function PremiumTestimonials() {
               <div className="mb-4 flex items-center justify-between border-b border-white/[0.06] pb-4">
                 <div className="flex gap-0.5">
                   {[...Array(5)].map((_, idx) => (
-                    <Star key={idx} className="h-4 w-4 fill-[#f5c76b] text-[#f5c76b]" />
+                    <Star
+                      key={idx}
+                      className="h-4 w-4 fill-[#f5c76b] text-[#f5c76b]"
+                    />
                   ))}
                 </div>
                 <Quote className="h-5 w-5 text-slate-600 transform rotate-180" />
