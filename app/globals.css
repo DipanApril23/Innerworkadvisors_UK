@@ -86,21 +86,103 @@
   }
 }
 
-/* .bg-conic {
-  background: conic-gradient(
-    from 0deg,
-    #06b6d4,
-    #3b82f6,
-    #8b5cf6,
-    #06b6d4
-  );
-} */
+/* ==========================================================================
+   PREMIUM TESTIMONIALS MODULAR STYLES
+   ========================================================================== */
 
-@keyframes border-beam {
-  0% {
-    offset-distance: 0%;
-  }
-  100% {
-    offset-distance: 100%;
-  }
+/* Default/Inactive Card State Layout */
+.testimonial-card {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.005)
+  );
+  transition:
+    border-color 0.6s ease,
+    background 0.6s ease,
+    box-shadow 0.6s ease,
+    filter 0.6s ease;
+  filter: blur(0.5px) opacity(0.55);
+}
+
+/* Active Front Highlight Class Overrides */
+.swiper-slide-active .testimonial-card {
+  filter: blur(0px) opacity(1);
+  border-color: rgba(245, 199, 107, 0.25);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0.015)
+  );
+  box-shadow:
+    0 20px 40px -15px rgba(15, 21, 46, 0.5),
+    0 0 30px -5px rgba(245, 199, 107, 0.06);
+}
+
+/* Show radial micro mesh light on active */
+.swiper-slide-active .active-glow-layer {
+  opacity: 1;
+}
+
+/* Bring text into high visibility contrast inside active slide */
+.swiper-slide-active .review-text {
+  color: #ffffff;
+}
+
+/* Elevate Icon container on Active */
+.swiper-slide-active .quote-badge {
+  background: rgba(245, 199, 107, 0.1);
+  border-color: rgba(245, 199, 107, 0.2);
+}
+
+.swiper-slide-active .quote-icon {
+  color: #f5c76b;
+}
+
+/* Elevate User Initial Avatar on Active */
+.swiper-slide-active .avatar-badge {
+  background: rgba(245, 199, 107, 0.12);
+  border-color: rgba(245, 199, 107, 0.25);
+  color: #f5c76b;
+}
+
+/* Custom Scrollbar for Modal Text Container */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 2px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(245, 199, 107, 0.2);
+  border-radius: 2px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #f5c76b;
+}
+
+/* Pagination Dot Standards */
+.custom-swiper-pagination.swiper-pagination-js-initialised {
+  position: relative !important;
+  bottom: 0 !important;
+}
+
+.custom-swiper-pagination .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  opacity: 1;
+  margin: 0 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-swiper-pagination .swiper-pagination-bullet-active {
+  width: 20px;
+  border-radius: 3px;
+  background: #f5c76b;
 }

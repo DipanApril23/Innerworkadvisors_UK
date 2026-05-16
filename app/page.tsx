@@ -10,6 +10,7 @@ import Services from "@/components/Services";
 import TeamSection from "@/components/TeamSection";
 import PageLoader from "@/components/PageLoader";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -50,6 +51,7 @@ export default function Home() {
           <TeamSection />
           <Services />
           <WhyChooseUs />
+          <Testimonials />
         </motion.main>
       )}
     </>

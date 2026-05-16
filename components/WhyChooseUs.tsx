@@ -709,8 +709,9 @@ export default function WhyChooseUs() {
           text-transparent
         "
       >
-        Choose Us
+        UK-based NRIs{" "}
       </span>
+      <span>Choose Us</span>
     </span>
   </motion.h2>
 
