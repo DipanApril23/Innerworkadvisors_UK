@@ -202,9 +202,6 @@ export default function PremiumTestimonials() {
               />
 
               <Sparkles className="relative h-4 w-4 text-[#f2cf7b]" />
-<<<<<<< HEAD
-              <span className="relative text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f2cf7b] sm:text-xs">
-=======
 
               <span
                 className="
@@ -217,7 +214,6 @@ export default function PremiumTestimonials() {
           sm:text-xs
         "
               >
->>>>>>> 665f8ce (updated Testimonials-Page-header)
                 Client Testimonials
               </span>
             </div>
@@ -320,8 +316,8 @@ export default function PremiumTestimonials() {
       md:text-lg
     "
           >
-            Trusted legal and consultancy solutions for NRIs with excellence,
-            transparency and global support.
+            Real experiences from global professionals. Crafted with total
+            transparency, regulatory excellence, and premium partner support.
           </motion.p>
 
           {/* Underline */}
@@ -386,7 +382,7 @@ export default function PremiumTestimonials() {
       blur-3xl
     "
           />
-        </motion.div>{" "}
+        </motion.div>
         {/* CAROUSEL COMPONENT WITH HIGHLIGHTER */}
         <div className="mt-12 max-w-5xl mx-auto">
           <div className="swiper-viewport-container relative lg:[clip-path:inset(-100px_0px_-100px_0px)]">
