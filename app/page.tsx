@@ -11,7 +11,7 @@ import TeamSection from "@/components/TeamSection";
 import PageLoader from "@/components/PageLoader";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Testimonials from "@/components/Testimonials";
-import PremiumOfficeSection from "@/components/OfficeSection";
+import ContactSection from "@/components/ContactSection";
 import OfficeSection from "@/components/OfficeSection";
 
 export default function Home() {
@@ -55,6 +55,7 @@ export default function Home() {
           <WhyChooseUs />
           <Testimonials />
           <OfficeSection />
+          <ContactSection />
         </motion.main>
       )}
     </>

@@ -187,39 +187,7 @@
   background: #f5c76b;
 }
 
-.swiper {
-  overflow: visible !important;
-}
 
-.swiper-slide {
-  height: auto !important;
-  display: flex;
-}
-
-.testimonial-card {
-  width: 100%;
-}
-
-/* LAPTOP RESPONSIVE FIX */
-@media (min-width: 900px) and (max-width: 1200px) {
-  .swiper {
-    padding-inline: 24px;
-  }
-}
-
-/* TABLET */
-@media (max-width: 1024px) {
-  .swiper {
-    padding-inline: 14px;
-  }
-}
-
-/* MOBILE */
-@media (max-width: 640px) {
-  .swiper {
-    padding-inline: 4px;
-  }
-}
 
 /* Floating Background Animation */
 @keyframes floating {
