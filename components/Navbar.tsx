@@ -300,7 +300,6 @@ export default function Navbar() {
               : "bg-[#304a7c]/75 border-white/15 backdrop-blur-xl py-4"
           }`}
         >
-          {/* gradient glow */}
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-yellow-400/5 pointer-events-none" />
 
           <div className="relative px-5 md:px-8 flex items-center justify-between">
@@ -326,8 +325,8 @@ export default function Navbar() {
               </div>
             </motion.div>
 
-            {/* DESKTOP MENU */}
-            <div className="hidden lg:flex items-center gap-8">
+            {/* DESKTOP MENU - now only visible on xl+ */}
+            <div className="hidden 2xl:flex items-center gap-8">
               {navItems.map((item) => (
                 <motion.a
                   key={item.label}
@@ -346,7 +345,6 @@ export default function Navbar() {
                 >
                   {item.label}
 
-                  {/* underline */}
                   <motion.span
                     className="absolute left-0 -bottom-2 h-[2px] rounded-full bg-[#f2cf7b]"
                     initial={{ width: 0, opacity: 0 }}
@@ -358,7 +356,6 @@ export default function Navbar() {
                     transition={{ duration: 0.25 }}
                   />
 
-                  {/* hover glow */}
                   <motion.span
                     className="absolute inset-0 -z-10 rounded-lg bg-white/5 blur-md"
                     initial={{ opacity: 0, scale: 0.8 }}
@@ -374,20 +371,22 @@ export default function Navbar() {
 
             {/* CTA + MOBILE BUTTON */}
             <div className="flex items-center gap-4">
+              {/* CTA now only visible on xl+ */}
               <motion.button
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 0 25px rgba(242,207,123,0.35)",
                 }}
                 whileTap={{ scale: 0.96 }}
-                className="nav-animate hidden md:block rounded-xl bg-[#f2cf7b] px-6 py-3 font-bold text-[#1b2c4d] shadow-lg"
+                className="nav-animate hidden 2xl:block rounded-xl bg-[#f2cf7b] px-6 py-3 font-bold text-[#1b2c4d] shadow-lg"
               >
                 Consultation
               </motion.button>
 
+              {/* Hamburger visible below xl */}
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
-                className="lg:hidden relative z-50 flex h-10 w-10 items-center justify-center"
+                className="2xl:hidden relative z-50 flex h-10 w-10 items-center justify-center"
               >
                 <div className="flex w-6 flex-col gap-1.5">
                   <span
@@ -420,7 +419,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ duration: 0.45 }}
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-[#0a1224]/95 backdrop-blur-2xl lg:hidden"
+            className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-[#0a1224]/95 backdrop-blur-2xl 2xl:hidden"
           >
             <div className="flex flex-col gap-8 text-center">
               {navItems.map((item, i) => (

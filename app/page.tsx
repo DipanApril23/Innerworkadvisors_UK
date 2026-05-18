@@ -11,6 +11,8 @@ import TeamSection from "@/components/TeamSection";
 import PageLoader from "@/components/PageLoader";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Testimonials from "@/components/Testimonials";
+import PremiumOfficeSection from "@/components/OfficeSection";
+import OfficeSection from "@/components/OfficeSection";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -52,6 +54,7 @@ export default function Home() {
           <Services />
           <WhyChooseUs />
           <Testimonials />
+          <OfficeSection />
         </motion.main>
       )}
     </>
