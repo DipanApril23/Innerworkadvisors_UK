@@ -13,6 +13,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import Testimonials from "@/components/Testimonials";
 import ContactSection from "@/components/ContactSection";
 import OfficeSection from "@/components/OfficeSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -56,6 +57,7 @@ export default function Home() {
           <Testimonials />
           <OfficeSection />
           <ContactSection />
+          <Footer />
         </motion.main>
       )}
     </>
